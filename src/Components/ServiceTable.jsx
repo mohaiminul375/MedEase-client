@@ -4,6 +4,7 @@ import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { FaPencil } from "react-icons/fa6";
 import Swal from "sweetalert2";
+import UpdateService from "./UpdateService";
 
 const ServiceTable = ({ service, idx }) => {
   const { _id, service_name, description, price } = service;
@@ -54,6 +55,7 @@ const ServiceTable = ({ service, idx }) => {
       <td>₹{price}</td>
       <td className="flex items-center gap-2">
         <FaPencil
+        onClick={() => document.getElementById(`update_modal_${_id}`).showModal()}
           title="edit service"
           className="text-xl bg-[#0155BD] text-white rounded-full p-1 cursor-pointer"
         />
@@ -63,6 +65,9 @@ const ServiceTable = ({ service, idx }) => {
           className="text-xl bg-red-700 text-white rounded-full cursor-pointer p-1"
         />
       </td>
+      <dialog id={`update_modal_${_id}`} className="modal">
+         <UpdateService service={service}></UpdateService>
+      </dialog>
     </tr>
   );
 };

@@ -78,7 +78,7 @@ const AddService = () => {
                 type="text"
                 placeholder="input service name"
                 className="input input-bordered"
-                {...register("service-name")}
+                {...register("service_name")}
                 required
               />
             </div>
