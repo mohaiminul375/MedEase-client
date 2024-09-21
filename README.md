@@ -35,15 +35,15 @@ This is a Health service listing website.
 
 - **Service Listing:**:
 
-- Displays a list of healthcare services in a table format.
-- Each service includes its name, description, and price.
+ - Displays a list of healthcare services in a table format.
+ - Each service includes its name, description, and price.
 
 - **Add Service (Real-time)**:
-- Users can add new healthcare services with the provided name, description, and price, and the new service will appear instantly without needing to reload the page.
+ -  Users can add new healthcare services with the provided name, description, and price, and the new service will appear instantly without needing to reload the page.
 
 - **Update Service (Real-time)**:
 
-  -Users can update the details of existing services (name, description, price) without needing to reload the page. Changes are reflected instantly.
+  - Users can update the details of existing services (name, description, price) without needing to reload the page. Changes are reflected instantly.
 
 - **Delete Service (Real-time)**:
   - Users can delete any service from the list, with the removal reflected immediately, no page reload required.
