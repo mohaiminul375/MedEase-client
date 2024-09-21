@@ -1,6 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
-import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { FaPencil } from "react-icons/fa6";
 import Swal from "sweetalert2";
@@ -9,8 +8,8 @@ import UpdateService from "./UpdateService";
 const ServiceTable = ({ service, idx }) => {
   const { _id, service_name, description, price } = service;
   const queryClient = useQueryClient();
-  //
 
+  //delete data through useMutation
   const { mutateAsync } = useMutation({
     mutationFn: async (id) => {
       const { data } = await axios.delete(
@@ -55,7 +54,9 @@ const ServiceTable = ({ service, idx }) => {
       <td>₹{price}</td>
       <td className="flex items-center gap-2">
         <FaPencil
-        onClick={() => document.getElementById(`update_modal_${_id}`).showModal()}
+          onClick={() =>
+            document.getElementById(`update_modal_${_id}`).showModal()
+          }
           title="edit service"
           className="text-xl bg-[#0155BD] text-white rounded-full p-1 cursor-pointer"
         />
@@ -66,7 +67,7 @@ const ServiceTable = ({ service, idx }) => {
         />
       </td>
       <dialog id={`update_modal_${_id}`} className="modal">
-         <UpdateService service={service}></UpdateService>
+        <UpdateService service={service}></UpdateService>
       </dialog>
     </tr>
   );

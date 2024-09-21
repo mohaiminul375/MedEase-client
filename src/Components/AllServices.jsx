@@ -4,7 +4,7 @@ import { BounceLoader } from "react-spinners";
 import ServiceTable from "./ServiceTable";
 
 const AllServices = () => {
-  // tanstack query
+  // tanstack query load data from server
   const { data: services, isLoading } = useQuery({
     queryFn: async () => {
       const { data } = await axios.get("http://localhost:3000/services");
@@ -21,7 +21,7 @@ const AllServices = () => {
   }
   console.log(services);
   return (
-    <section className="mt-10">
+    <section className="mt-8">
       <div>
         <h2 className="text-center text-4xl font-bold text-[#0155BD]">
           Our all Services
@@ -29,9 +29,11 @@ const AllServices = () => {
       </div>
       <div>
         {services.length == 0 ? (
-          <h2 className="text-center mt-12 text-red-700 text-2xl">No Services Found!</h2>
+          <h2 className="text-center  text-red-700 text-2xl">
+            No Services Found!
+          </h2>
         ) : (
-          <div className="mt-10">
+          <div className="mt-5">
             <div className="overflow-x-auto">
               <table className="table border border-y-2">
                 {/* head */}

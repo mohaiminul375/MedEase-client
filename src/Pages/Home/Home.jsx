@@ -1,12 +1,11 @@
-import React from "react";
 import AddService from "../../Components/Shared/AddService";
 import AllServices from "../../Components/AllServices";
 
 const Home = () => {
-  // react hook form
+
 
   return (
-    <section className="mt-20">
+    <section className="mt-10">
       <AddService></AddService>
       <AllServices></AllServices>
     </section>

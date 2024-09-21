@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const UpdateService = ({ service }) => {
   const { _id, service_name, description, price } = service;
   const queryClient = useQueryClient();
-  //
+  //update services UseMutation
   const { mutateAsync } = useMutation({
     mutationFn: async ({ _id, update_info }) => {
         console.log(update_info)
@@ -29,7 +29,7 @@ const UpdateService = ({ service }) => {
       }
     },
   });
-
+// react hook form
   const {
     register,
     handleSubmit,

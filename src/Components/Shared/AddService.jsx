@@ -1,13 +1,12 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
-import React from "react";
 import { useForm } from "react-hook-form";
 import { FaXmark } from "react-icons/fa6";
 import { IoMdAdd } from "react-icons/io";
 import Swal from "sweetalert2";
 const AddService = () => {
   const queryClient = useQueryClient();
-  // useMutation (tanstack query)
+  // useMutation (tanstack query) for post date to db
   const { mutateAsync } = useMutation({
     mutationFn: async (service) => {
       console.log(service);
@@ -15,8 +14,6 @@ const AddService = () => {
         "http://localhost:3000/services",
         service
       );
-
-      console.log(data);
       return data;
     },
     onSuccess: (data) => {
@@ -108,7 +105,9 @@ const AddService = () => {
                     !isNaN(value) || "Price must be a number",
                 })}
               />
-              {errors.price && <p className="text-red-500">{errors.price.message}</p>}
+              {errors.price && (
+                <p className="text-red-500">{errors.price.message}</p>
+              )}
             </div>
             <button className="mt-5 w-full py-2 bg-[#0155BD] text-white font-semibold rounded-full">
               Add
