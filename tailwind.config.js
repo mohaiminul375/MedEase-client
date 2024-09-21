@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'matemaise': '"Matemasie", sans-serif',
+        'inter': '"Inter", system-ui'
+      }
+    },
   },
   plugins: [require('daisyui'),],
 }
