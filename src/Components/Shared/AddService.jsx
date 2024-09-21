@@ -6,8 +6,7 @@ import { FaXmark } from "react-icons/fa6";
 import { IoMdAdd } from "react-icons/io";
 import Swal from "sweetalert2";
 const AddService = () => {
-  const queryClient = useQueryClient();
-
+  // useMutation (tanstack query)
   const { mutateAsync } = useMutation({
     mutationFn: async (service) => {
       console.log(service);
@@ -16,7 +15,7 @@ const AddService = () => {
         service
       );
 
-        console.log(data);
+      console.log(data);
       return data;
     },
     onSuccess: (data) => {
@@ -35,6 +34,7 @@ const AddService = () => {
 
   const onSubmit = (service) => {
     console.log(service);
+    // data pass to useMutation
     mutateAsync(service);
   };
   return (
