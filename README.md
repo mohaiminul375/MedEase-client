@@ -1,6 +1,6 @@
 # MedEase
 
-# Live URL:
+# Live URL: https://med-ease-375.netlify.app
 
 - React Front-end Developer Intern job task from Jarurat Care
 
@@ -35,11 +35,11 @@ This is a Health service listing website.
 
 - **Service Listing:**:
 
- - Displays a list of healthcare services in a table format.
- - Each service includes its name, description, and price.
+  - Displays a list of healthcare services in a table format.
+  - Each service includes its name, description, and price.
 
 - **Add Service (Real-time)**:
- -  Users can add new healthcare services with the provided name, description, and price, and the new service will appear instantly without needing to reload the page.
+  - Users can add new healthcare services with the provided name, description, and price, and the new service will appear instantly without needing to reload the page.
 
 - **Update Service (Real-time)**:
 

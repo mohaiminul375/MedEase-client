@@ -11,7 +11,7 @@ const AddService = () => {
     mutationFn: async (service) => {
       console.log(service);
       const { data } = await axios.post(
-        "http://localhost:3000/services",
+        "https://medease-server.vercel.app/services",
         service
       );
       return data;

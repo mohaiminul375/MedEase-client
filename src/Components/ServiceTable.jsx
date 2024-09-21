@@ -13,7 +13,7 @@ const ServiceTable = ({ service, idx }) => {
   const { mutateAsync } = useMutation({
     mutationFn: async (id) => {
       const { data } = await axios.delete(
-        `http://localhost:3000/services/${id}`
+        `https://medease-server.vercel.app/services/${id}`
       );
       console.log(data);
       return data;

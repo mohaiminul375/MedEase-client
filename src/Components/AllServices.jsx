@@ -7,7 +7,7 @@ const AllServices = () => {
   // tanstack query load data from server
   const { data: services, isLoading } = useQuery({
     queryFn: async () => {
-      const { data } = await axios.get("http://localhost:3000/services");
+      const { data } = await axios.get("https://medease-server.vercel.app/services");
       return data;
     },
     queryKey: ["all-services"],

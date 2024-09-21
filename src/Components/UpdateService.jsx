@@ -12,7 +12,7 @@ const UpdateService = ({ service }) => {
     mutationFn: async ({ _id, update_info }) => {
         console.log(update_info)
       const { data } = await axios.patch(
-        `http://localhost:3000/services/${_id}`,
+        `https://medease-server.vercel.app/services/${_id}`,
          update_info 
       );
       console.log(data)
